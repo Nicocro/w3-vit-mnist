@@ -1,0 +1,19 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+*.ipynb_checkpoints
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# System files
+.DS_Store
+
+# PyTorch checkpoints
+*.pt
+
+# Gradio session files
+gradio_cached_examples/
