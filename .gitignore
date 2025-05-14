@@ -17,3 +17,6 @@ venv/
 
 # Gradio session files
 gradio_cached_examples/
+
+# Ignore downloaded datasets
+data/
