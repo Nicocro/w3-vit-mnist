@@ -1,3 +1,14 @@
+---
+title: MNIST 2x2 Transformer Demo
+emoji: 🔢
+colorFrom: gray
+colorTo: blue
+sdk: gradio
+sdk_version: 5.29.0  # or your current gradio version
+app_file: app.py
+pinned: false
+---
+
 # Transformer MNIST 2×2 — Image-to-Sequence Prediction
 
 This project implements a minimal Transformer-based model that takes a 2×2 grid of MNIST digits as input and autoregressively predicts the corresponding 4-digit sequence. It serves as a practical deep dive into the inner workings of the Transformer architecture and basic multimodality concepts, combining vision (image patches) with language modeling (digit sequences).
@@ -51,4 +62,18 @@ Evaluation is done on the held-out MNIST test set using greedy decoding:
 
 - **training loss at epoch 10:** 0.0101
 - **Sequence accuracy:** 93.77% on held-out test set
-- **Per digit accuracy:** 98.43% on held-out test set 
+- **Per digit accuracy:** 98.43% on held-out test set
+
+## 6. Gradio App
+
+Finally, I build a simple gradio app to let users draw digits on a 2X2 canvas grid with a brush.
+After users submits, Inference runs and prints out the 4 predicted digits. 
+
+The app is also hosted on a [Hugging Face Space](https://huggingface.co/spaces/nico-x/transformer-mnist-demo)
+
+If you try it out you'll realise results are not that great, especially if you consider the high accuracy on
+the test set. This is probably due to the out of distributon nature of the digit manually drawn by users with mouse on a canvas, which visibly differ from how digits are usually written inn MNIST. 
+
+[![Watch the demo](https://cdn.loom.com/sessions/thumbnails/02080a8a466844df9fe6b55cd3d12c1a-bc0dbd9369660461-full-play.gif)](https://www.loom.com/share/02080a8a466844df9fe6b55cd3d12c1a?sid=f40a265a-39d7-41fd-8079-98b40a7d00b3)
+
+Future work could include a pipeline to get feedback from users on good/bad outcomes and provide corrections that I could use as labels to trigger fine-tuning of the model.
