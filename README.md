@@ -11,7 +11,7 @@ pinned: false
 
 # Transformer MNIST 2×2 — Image-to-Sequence Prediction
 
-This project implements a minimal Transformer-based model that takes a 2×2 grid of MNIST digits as input and autoregressively predicts the corresponding 4-digit sequence. It serves as a practical deep dive into the inner workings of the Transformer architecture and basic multimodality concepts, combining vision (image patches) with language modeling (digit sequences).
+In this project I implement a minimal Transformer-based model that takes a 2×2 grid of MNIST digits as input and autoregressively predicts the corresponding 4-digit sequence. It serves as a practical deep dive into the inner workings of the Transformer architecture and basic multimodality concepts, combining vision (image patches) with language modeling (digit sequences). Really enjoyed this one, forces you to think through transformer blocks quite deeply. 
 
 ## 1. Project Overview
 
